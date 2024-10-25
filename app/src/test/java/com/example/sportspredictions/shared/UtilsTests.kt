@@ -10,7 +10,7 @@ import org.junit.Test
 class UtilsTests {
 
     @Test
-    fun splitNameAndPosition_returns_expectedString() {
+    fun splitNameAndPosition_with2Spaces_returns_expectedPair() {
         // Arrange
         val testNameAndPosition = "T. Tester QB"
 
@@ -19,6 +19,18 @@ class UtilsTests {
 
         // Assert
         assertEquals(Pair("T. Tester", "QB"), resultPair)
+    }
+
+    @Test
+    fun splitNameAndPosition_with3Spaces_returns_expectedPair() {
+        // Arrange
+        val testNameAndPosition = "T. Tester Jr. QB"
+
+        // Act
+        val resultPair = testNameAndPosition.splitNameFromPosition()
+
+        // Assert
+        assertEquals(Pair("T. Tester Jr.", "QB"), resultPair)
     }
 
     @Test

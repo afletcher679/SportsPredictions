@@ -8,9 +8,17 @@ class Utils {
 
     companion object{
         fun String.splitNameFromPosition(): Pair<String, String> {
-            val result = this.split(" ", limit = 3)
-            val name = result[0] + " " + result[1]
-            return Pair(name, result[2])
+            var name:String = ""
+            var result = this.split(" ", limit = 4)
+            val position = result.last()
+            result = ArrayList(result.dropLast(1))
+            result.forEach {
+                name += if (it != result.last())
+                    "$it "
+                else
+                    it
+            }
+            return Pair(name, position)
         }
 
         fun String.removeCommaFromNumberString(): String {
