@@ -10,7 +10,6 @@ import it.skrape.selects.DocElement
 import it.skrape.selects.html5.span
 
 class PassingStatsProvider {
-
     companion object {
         fun getAllPassingPlayerStats(pageTables: List<DocElement>): List<PassingStats> {
             val passingTables =

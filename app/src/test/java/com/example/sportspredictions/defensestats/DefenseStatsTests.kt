@@ -6,7 +6,7 @@ import com.example.sportspredictions.webscraping.WebScrapeUtils
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
-class DefenseStatsTest {
+class DefenseStatsTests {
     @Test
     fun getAllDefensePlayerStats_returns_stats() {
         // Arrange
