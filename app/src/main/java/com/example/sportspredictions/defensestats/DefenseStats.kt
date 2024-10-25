@@ -7,7 +7,7 @@ data class DefenseStats(
     var soloTackles: Int = 0,
     var assistedTackles: Int = 0,
     var totalTackles: Int = 0,
-    var sacks: Int = 0,
+    var sacks: Double = 0.0,
     var sackYards: Int = 0,
     var tacklesForLoss: Int = 0,
     var passesDefended: Int = 0,
